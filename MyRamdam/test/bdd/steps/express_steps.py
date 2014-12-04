@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from lettuce import step
 
-@step(u'Given the user has identification')
-def given_the_user_has_identification(step):
+@step(u'Given the user has identification and item has id')
+def given_the_user_has_identification_and_item_has_id(step):
     assert False, 'This step must be implemented'
 
 @step(u'And the various feelings are shown')
