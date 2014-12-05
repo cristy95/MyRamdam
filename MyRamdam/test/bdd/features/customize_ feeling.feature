@@ -8,7 +8,7 @@ Feature: my.Randam application to be able to add customized feeling
 	When I click the submit/post button
 	Then I could see post "feeling incomplete"
 
-	 Scenario: Failed to choose the main feeling
+	Scenario: Failed to choose the main feeling
 	Given I add feeling "confused"
 	And I do not choose a feeling it is leaning towards
 	#When I click the submit/post button
