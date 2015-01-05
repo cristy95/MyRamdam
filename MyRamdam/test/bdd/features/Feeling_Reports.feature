@@ -10,7 +10,7 @@ Feature: Feeling reports for an item
         Scenario: Feeling reports daily with no feeling
         Given that I did not put feeling yesterday
         When I want to see the reports
-        Then the program will say that "You don't put feeling yesterday"
+        Then the program will say that: You dont put feeling yesterday
 
         Scenario: Feeling reports weekly
         Given that I have put feeling to an a item with in a week
@@ -20,7 +20,7 @@ Feature: Feeling reports for an item
         Scenario: Feeling reports weekly with no feeling
         Given that I did not put feeling with in a week
         When I want to see the reports
-        Then the program will say that "You don't put feeling in a week"
+        Then the program will say that: You dont put feeling in a week
 
         Scenario: Feeling reports monthly
         Given that I have put feeling to an a item with in a month
@@ -30,4 +30,4 @@ Feature: Feeling reports for an item
         Scenario: Feeling reports monthly with no feeling
         Given that I did not put feeling with in a month
         When I want to see the reports
-        Then the program will say that "You don't put feeling in a month"
+        Then the program will say that: You dont put feeling in a month
