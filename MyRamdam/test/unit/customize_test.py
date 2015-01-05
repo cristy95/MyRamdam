@@ -11,7 +11,3 @@ class TestCustFeel(unittest.TestCase):
         feel = NewFeel("incomplete", "sad")
         self.assertEqual(feel.add_feeling(feel), "OK")
         self.assertEqual(feel.getLeanFeel(cfeel_id), "sad")
-
-
-
-        
