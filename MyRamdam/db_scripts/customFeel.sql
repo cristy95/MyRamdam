@@ -1,4 +1,4 @@
-create table customFeel(
+create table customFeelLabel(
     cfeel_id serial primary key,
     cfeel_name text,
     feelID_FK serial references feelings (feel_id)
@@ -12,7 +12,7 @@ create or replace function get_leanfeel(in int, out int)
 	returns setof record as
 
 $$ 
-    select feelID_FK from customFeel
+    select feelID_FK from customFeelLabel
 		where cfeel_id = $1;
 $$
 	language 'sql';
