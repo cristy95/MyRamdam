@@ -1,5 +1,9 @@
 from dosql import *
 import cgi
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 class NewFeel(object):
     
