@@ -1,0 +1,29 @@
+Design Patterns:
+
+A - Express Feeling - setup for the four basic feelings,  					-> Singleton  	
+	access of other methods											-> Facade						
+																				
+B - Comment anonymously - UI for comment box 							-> Factory							
+																				
+I - Comment not anonymously 											-> Factory		
+
+C - Customized "Feeling" - for enabling add of new feel 									
+	choose of feeling													-> Factory	
+	create of feeling													-> Template	
+
+D - "Feeling" rate - for computing "feeling" rate 							-> Command				
+	UI																-> Observer	
+																				
+E - Share "feeling" - setup to be able to share "feel" 						-> Command				
+																				
+F - Edit Comment - for editing comment									-> Proxy				 
+																				
+G - Delete Comment - for deleting comment 							-> Command 				
+
+H - Feeling report weekly  - able to compute for weekly report 				-> Observer
+
+J - Feeling report daily - able to compute for daily report					-> Observer				
+
+K - Feeling report monthly   - able to compute for monthly report			-> Observer				
+
+UI for reports (feelings) 												-> Template																		
