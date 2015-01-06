@@ -15,6 +15,8 @@ class NewFeel(object):
             stringed = map(str, ret)
             result.append(stringed)
 
+        return result
+
     def getLeanFeel(req, newfeelname):
     	newfeelname = cgi.escape(newfeelname)
 
@@ -26,5 +28,7 @@ class NewFeel(object):
         for ret in rets:
             stringed = map(str, ret)
             result.append(stringed)
+
+        return result
 
     
