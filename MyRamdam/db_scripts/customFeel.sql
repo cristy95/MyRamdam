@@ -1,7 +1,7 @@
 create table customFeel(
     cfeel_id serial primary key,
     cfeel_name text,
-    feelID_FK serial references feel (feel_id),
+    feelID_FK serial references feelings (feel_id),
 );
 
 
