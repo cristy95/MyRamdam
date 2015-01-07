@@ -28,5 +28,5 @@ Scenario: Express feeling but session has expired
         When the user chooses "sad"
         Then the system will ask for a password
         And the user will enter his password
-        And the feeling is recorded
+        And the feeling "sad" is recorded
         And the data item is updated with the feeling

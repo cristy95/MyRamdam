@@ -22,7 +22,12 @@ def when_the_user_chooses_feeling(step, feeling1):
 
 @step(u'Then the feeling "([^"]*)" is recorded')
 def then_the_feeling_group1_is_recorded(step, feeling1):
-    assert True
+    user_id = "007"
+    item_id = "008"
+
+    assert_equal(manager1.add_user_feeling(user_id, 001, item_id), 'OK')
+	assert_equal(manager1.add_rate_count(item_id, 001), 'OK')
+	assert_equal(manager1.add_daily_log(001), 'OK')
 
 
 @step(u'And the data item is updated with the feeling')
@@ -46,4 +51,9 @@ def and_the_user_will_enter_his_password(step):
 
 @step(u'And the feeling is recorded')
 def and_the_feeling_is_recorded(step):
-    assert True
+    user_id = "007"
+    item_id = "008"
+
+    assert_equal(manager1.add_user_feeling(user_id, 001, item_id), 'OK')
+	assert_equal(manager1.add_rate_count(item_id, 001), 'OK')
+	assert_equal(manager1.add_daily_log(001), 'OK')
