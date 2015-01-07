@@ -2,9 +2,10 @@
 from lettuce import step
 from nose.tools import *
 #from feelings import Feeling
-
+from myramdam.feel import *
 #FEELING = Feeling()
 
+FEEL = Feel()
 @step(u'Given the user has identification and item has id')
 def given_the_user_has_identification_and_item_has_id(step):
     assert True
@@ -12,7 +13,7 @@ def given_the_user_has_identification_and_item_has_id(step):
 
 @step(u'And the following feelings are shown')
 def and_the_following_feelings_are_shown(step):
-	assert True
+    assert True
 
 
 @step(u'When the user chooses "([^"]*)"')
@@ -24,10 +25,11 @@ def when_the_user_chooses_feeling(step, feeling1):
 def then_the_feeling_group1_is_recorded(step, feeling1):
     user_id = "007"
     item_id = "008"
+    feel_id = FEEL.get_feel_id(feeling1)
 
-    assert_equal(manager1.add_user_feeling(user_id, 001, item_id), 'OK')
-	assert_equal(manager1.add_rate_count(item_id, 001), 'OK')
-	assert_equal(manager1.add_daily_log(001), 'OK')
+    assert_equal(manager1.add_user_feeling(user_id, feel_id, item_id), 'OK')
+    assert_equal(manager1.add_rate_count(item_id, feel_id), 'OK')
+    assert_equal(manager1.add_daily_log(feel_id), 'OK')
 
 
 @step(u'And the data item is updated with the feeling')
@@ -49,11 +51,12 @@ def and_the_user_will_enter_his_password(step):
     assert True
 
 
-@step(u'And the feeling is recorded')
-def and_the_feeling_is_recorded(step):
+@step(u'And the feeling "([^"]*)" is recorded')
+def and_the_feeling_group1_is_recorded(step, feeling1):
     user_id = "007"
     item_id = "008"
+    feel_id = manager1.get_fee_id(feeling1)
 
-    assert_equal(manager1.add_user_feeling(user_id, 001, item_id), 'OK')
-	assert_equal(manager1.add_rate_count(item_id, 001), 'OK')
-	assert_equal(manager1.add_daily_log(001), 'OK')
+    assert_equal(manager1.add_user_feeling(user_id, feel_id, item_id), 'OK')
+    assert_equal(manager1.add_rate_count(item_id, _feel_id), 'OK')
+    assert_equal(manager1.add_daily_log(feel_id), 'OK')
