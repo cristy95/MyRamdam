@@ -1,5 +1,9 @@
 from dosql import *
 import cgi
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 class NewFeel(object):
     
@@ -15,6 +19,8 @@ class NewFeel(object):
             stringed = map(str, ret)
             result.append(stringed)
 
+        return result
+
     def getLeanFeel(req, newfeelname):
     	newfeelname = cgi.escape(newfeelname)
 
@@ -26,5 +32,7 @@ class NewFeel(object):
         for ret in rets:
             stringed = map(str, ret)
             result.append(stringed)
+
+        return result
 
     
